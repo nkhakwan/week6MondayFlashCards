@@ -18,13 +18,17 @@ function displayTimer(question){
 
 $(document).ready(function() {
     let question1 = new Question("");
-    $("#ourquestion").html(question1.askQuestion());
-    question1.setScore();
-    question1.setVerification();
-    displayTimer(question1);
-    $("form").submit(function(event){
+    // under click function
+    $("#start-quiz").click(function(){
+        $("#ourquestion").html(question1.askQuestion());
+        question1.setScore();
+        question1.setVerification();
+        displayTimer(question1);
+    })
+    // get out of click function
+    $("#uenter").submit(function(event){
         event.preventDefault();
-        question1($("#useranswer").val());
+        question1($("#answer").val());
     });   
 });
 
