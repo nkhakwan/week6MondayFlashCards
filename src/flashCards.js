@@ -1,8 +1,6 @@
 export class Question {
-    constructor(question, answer, correctAnswer){
-        this.question = question;
+    constructor(answer){
         this.answer = answer;
-        this.correctAnswer = correctAnswer;
         this.score = 10;
         this.response = "";
     }
@@ -10,8 +8,8 @@ export class Question {
 
   setVerification() {
     setTimeout(() => {
-      let answers =[];
-      if (this.answer[1] === this.correctAnswer){
+      let answers =["blue"];
+      if (answers[0] === this.answer){
         this.response = "correct";
       }else {
         this.response = "not correct";
@@ -24,4 +22,10 @@ setScore() {
     this.score --;
 }, 1000);
 }
+
+
+askQuestion(){
+  return "what is the coolest color";
+}
+
 }

@@ -17,20 +17,15 @@ function displayTimer(question){
 
 
 $(document).ready(function() {
-    //$("form").submit(function(event){
-        //event.preventDefault();
-    let q1 = "what is the coolest color?";
-    let q1A = ["red","blue","yellow"];
-    let q1correct = "blue";
-    var question1 = new Question(q1,q1A,q1correct);
+    let question1 = new Question("");
+    $("#ourquestion").html(question1.askQuestion());
     question1.setScore();
-    //var ourAnswer = question1.setVerification();
-    //console.log(`${ourAnswer}`);
     question1.setVerification();
     displayTimer(question1);
-    //$("#question").html(ourAnswer);
-
-   // });   
+    $("form").submit(function(event){
+        event.preventDefault();
+        question1($("#useranswer").val());
+    });   
 });
 
 
@@ -40,16 +35,3 @@ $(document).ready(function() {
 
 
 
-// // user interface logic -------------------------------
-// $(document).ready(function() {
-//     $("form").submit(function(event){
-//       event.preventDefault();
-//       var pizzaSize = parseInt($("#size").val());
-//       var meatType  = parseInt($("#meat").val());
-//       var vegType   = parseInt($("#veg").val());
-//       var pizzaOrder = new PizzaOrders(pizzaSize,meatType,vegType);
-//      $("#cost").html(pizzaOrder.calculateOrder());
-//      pizzaOrder.details();
-//      $("#det").html("You have order"+ " " +pizzaOrder.sizeCat + " pizza with meat topping of " + pizzaOrder.toppingOne + " and veggie topping of " + pizzaOrder.toppingTwo + " ");
-//     });
-//   });
