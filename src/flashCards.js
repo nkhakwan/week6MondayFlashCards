@@ -14,6 +14,7 @@ export class Question {
       }else {
         this.response = "not correct";
       }    
+      console.log(`this is from the set var function ${this.response}`);
     }, 10000);
   }
 

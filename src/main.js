@@ -9,8 +9,8 @@ import './styles.css';
 function displayTimer(question){
     setInterval(() => {
     $("#timer").html(question.score);
-    console.log(`here is our answer${question.response}`);
-    $("#question").html(question.response);
+    console.log(`here is our answer${question.response} and here is the user input${$("#answer").val()}`);
+    $("#result").html(question.response);
 },1000);
 }
 
@@ -20,7 +20,7 @@ $(document).ready(function() {
     let question1 = new Question("");
     // under click function
     $("#start-quiz").click(function(){
-        $("#ourquestion").html(question1.askQuestion());
+        $("#question").html(question1.askQuestion());
         question1.setScore();
         question1.setVerification();
         displayTimer(question1);
@@ -28,6 +28,7 @@ $(document).ready(function() {
     // get out of click function
     $("#uenter").submit(function(event){
         event.preventDefault();
+        console.log($("#answer").val());
         question1($("#answer").val());
     });   
 });
