@@ -1,6 +1,6 @@
 export class Question {
-    constructor(answer){
-        this.answer = answer;
+    constructor(){
+        this.answer = "";
         this.score = 10;
         this.response = "";
     }
@@ -8,13 +8,14 @@ export class Question {
 
   setVerification() {
     setTimeout(() => {
+      console.log(`Here is the answer that the function got ${this.answer}`);
       let answers =["blue"];
       if (answers[0] === this.answer){
         this.response = "correct";
       }else {
         this.response = "not correct";
       }    
-      console.log(`this is from the set var function ${this.response}`);
+      
     }, 10000);
   }
 
@@ -28,5 +29,8 @@ export class Question {
   askQuestion(){
     return "what is the coolest color";
   }
-
+  updateAnswer(answer){
+    console.log(`i am being called with ${answer}`);
+    this.answer = answer;
+  }
 }

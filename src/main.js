@@ -9,7 +9,7 @@ import './styles.css';
 function displayTimer(question){
     setInterval(() => {
     $("#timer").html(question.score);
-    console.log(`here is our answer${question.response} and here is the user input${$("#answer").val()}`);
+   console.log(`here is our answer ${question.response} and here is the user input ${$("#answer").val()}`);
     $("#result").html(question.response);
 },1000);
 }
@@ -17,7 +17,7 @@ function displayTimer(question){
 
 
 $(document).ready(function() {
-    let question1 = new Question("");
+    let question1 = new Question();
     // under click function
     $("#start-quiz").click(function(){
         $("#question").html(question1.askQuestion());
@@ -26,10 +26,13 @@ $(document).ready(function() {
         displayTimer(question1);
     })
     // get out of click function
-    $("#uenter").submit(function(event){
+    $("form#uenter").submit(function(event){
         event.preventDefault();
-        console.log($("#answer").val());
-        question1($("#answer").val());
+        //console.log($("#answer").val())
+        var myAnswer = $("#answer").val();
+        console.log (`am i being defined ${myAnswer}`)
+        question1.answer = myAnswer;
+        //question1.answer = $("#answer").val();
     });   
 });
 
