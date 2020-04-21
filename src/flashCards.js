@@ -3,7 +3,10 @@ export class Question {
         this.answer = "";
         this.score = 10;
         this.response = "";
+        this.time = "";
     }
+
+    
 
 
   setVerification() {
@@ -19,10 +22,26 @@ export class Question {
     }, 10000);
   }
 
+
+  /*var myVar;
+
+function myFunction() {
+  myVar = setInterval(alertFunc, 3000);
+}
+
+function alertFunc() {
+  alert("Hello!");
+}*/
+
   setScore() {
-    setInterval(() => {
+    let ggg = setInterval(() => {
       this.score --;
-  }, 1000);
+      if(this.answer != ""){
+        this.time = this.score;
+        clearInterval(ggg);
+      }
+      console.log (`input was inputted at ${this.time}`);
+    }, 1000);
   }
 
 
@@ -31,3 +50,4 @@ export class Question {
   }
   
 }
+

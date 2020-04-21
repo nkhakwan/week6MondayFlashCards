@@ -53,3 +53,15 @@ setTimeout and setInterval usage
 This software is licensed under the Epicodus inc license.
 
 Copyright (c) 2020 **_Khan Sahab_**
+
+@Travis. if i want to note the time when the user inputs a string and presses enter, i can put a setInterval function that checks every 50 millisecond to see whether the variable that was empty has changed or not. But my question. Is there a method in javascript that notes 
+
+ @Travis. I want to capture the time when this.answer is written into. Following obviously is not working. So how can i do it? Following keeps on loading this.time with new decremented value after this.answer has been written into.
+ 
+ setScore() {
+    setInterval(() => {
+      this.score --;
+      if(this.answer != ""){
+        this.time = this.score;
+      }
+  }, 1000);

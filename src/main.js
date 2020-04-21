@@ -9,7 +9,7 @@ import './styles.css';
 function displayTimer(question){
     setInterval(() => {
     $("#timer").html(question.score);
-   console.log(`here is our answer ${question.response} and here is the user input ${$("#answer").val()}`);
+   console.log(`here is our answer ${question.response} and here is the user input ${$("#answer").val()} and here is our time ${question.time}`);
     $("#result").html(question.response);
 },1000);
 }
