@@ -14,18 +14,18 @@ export class Question {
       }else {
         this.response = "not correct";
       }    
-  }, 10000);
-}
+    }, 10000);
+  }
 
-setScore() {
-  setInterval(() => {
-    this.score --;
-}, 1000);
-}
+  setScore() {
+    setInterval(() => {
+      this.score --;
+  }, 1000);
+  }
 
 
-askQuestion(){
-  return "what is the coolest color";
-}
+  askQuestion(){
+    return "what is the coolest color";
+  }
 
 }
