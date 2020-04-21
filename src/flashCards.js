@@ -29,8 +29,5 @@ export class Question {
   askQuestion(){
     return "what is the coolest color";
   }
-  updateAnswer(answer){
-    console.log(`i am being called with ${answer}`);
-    this.answer = answer;
-  }
+  
 }
