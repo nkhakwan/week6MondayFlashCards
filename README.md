@@ -16,10 +16,9 @@ _A trivia game where questions are generated with a timer that counts down. The 
 
 ## Known Bugs
 
-* The work is unfinished. setTimeout and setInterval both have been deployed successfully but couple of things are remaining to make the web sit workable.
-* Tests also have not been written yet.
+* Not known.
 
-## Support and contact details
+## Support and contact 
 
 _Have a bug or an issue with this application? email post_khan@yahoo.com_
 
@@ -36,13 +35,14 @@ WebpackHTML plugins
 Jest and Babel.
 JS classes
 setTimeout and setInterval usage
+clear setInterval
 
 
 ## Specs Input
 | Spec | Input | result |
 | :-------------  | :-----------------------------------------------------| :----------------------------------------|
-| **Enter the game**  | User Input:"clicks the button" | Output: " Both a question and counter gets displayed " |
-| **Result** | User Input: "enters the answer" | Output: "not correct or incorrect is displayed. Need to work to display something that says time run out"|
+| **Enter the game**  | User Input:"clicks the start button" | Output: " Both a question and counter gets displayed " |
+| **Result** | User Input: "enters the answer" | Output: "**not correct** or **incorrect** is displayed. Timer also starts and is displayed **counting down**. Counter Stops the moment answer is input. And the final value of the counter is frozen on the page. "|
 
 
 
@@ -52,16 +52,5 @@ setTimeout and setInterval usage
 
 This software is licensed under the Epicodus inc license.
 
-Copyright (c) 2020 **_Khan Sahab_**
+Copyright (c) 2020 **_Khan Sahab_ and _Josh Hellman_**
 
-@Travis. if i want to note the time when the user inputs a string and presses enter, i can put a setInterval function that checks every 50 millisecond to see whether the variable that was empty has changed or not. But my question. Is there a method in javascript that notes 
-
- @Travis. I want to capture the time when this.answer is written into. Following obviously is not working. So how can i do it? Following keeps on loading this.time with new decremented value after this.answer has been written into.
- 
- setScore() {
-    setInterval(() => {
-      this.score --;
-      if(this.answer != ""){
-        this.time = this.score;
-      }
-  }, 1000);
