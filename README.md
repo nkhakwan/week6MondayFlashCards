@@ -1,6 +1,6 @@
 # _Timed Flash Cards_
 
-#### _Epicodus Week 6 Monday Project_
+#### _Epicodus Week 6 Monday and Teusday Project_
 
 #### By _**KhanSahab**_ and _**Josh Hellman**_
 
