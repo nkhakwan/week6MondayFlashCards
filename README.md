@@ -18,6 +18,10 @@ _A trivia game where questions are generated with a timer that counts down. The 
 
 * Not known.
 
+## A word of Cauthion.
+
+* Even if the answer is entered two seconds after the result is displayed 10 seconds later.
+
 ## Support and contact 
 
 _Have a bug or an issue with this application? email post_khan@yahoo.com_
