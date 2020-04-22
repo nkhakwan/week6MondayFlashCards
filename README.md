@@ -18,7 +18,7 @@ _A trivia game where questions are generated with a timer that counts down. The 
 
 * Not known.
 
-## A word of Cauthion.
+## A word of Caution.
 
 * Even if the answer is entered two seconds after the result is displayed 10 seconds later.
 
