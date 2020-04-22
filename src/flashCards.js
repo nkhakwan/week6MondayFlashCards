@@ -6,9 +6,6 @@ export class Question {
         this.time = "";
     }
 
-    
-
-
   setVerification() {
     setTimeout(() => {
       console.log(`Here is the answer that the function got ${this.answer}`);
@@ -22,17 +19,6 @@ export class Question {
     }, 10000);
   }
 
-
-  /*var myVar;
-
-function myFunction() {
-  myVar = setInterval(alertFunc, 3000);
-}
-
-function alertFunc() {
-  alert("Hello!");
-}*/
-
   setScore() {
     let ggg = setInterval(() => {
       this.score --;
@@ -43,7 +29,6 @@ function alertFunc() {
       console.log (`input was inputted at ${this.time}`);
     }, 1000);
   }
-
 
   askQuestion(){
     return "what is the coolest color";
